@@ -71,7 +71,7 @@ export default function ControlMenu({}: Props) {
           className="mt-2 sm:w-[200px]"
           defaultValue={[100]}
           min={75}
-          max={200}
+          max={125}
           onValueChange={(value) => {
             mutateStyles("--content-text-size", `${value[0]}`);
           }}

@@ -67,34 +67,34 @@
 
   .ocb {
     /* Base text size */
-    font-size: calc(0.875em * var(--content-text-size, 100) / 100);
+    font-size: calc(1rem * var(--content-text-size, 100) / 100);
     font-family: var(--content-font-family);
   }
 
   /* Style class for text sm */
   .ocb .text-xs {
-    font-size: calc(0.75rem * var(--content-text-size, 100) / 100);
-    line-height: calc(1rem * var(--content-text-size, 100) / 100);
+    font-size: 0.75em;
+    line-height: 1em;
   }
   .ocb .text-sm {
-    font-size: calc(0.875rem * var(--content-text-size, 100) / 100);
-    line-height: calc(1.25rem * var(--content-text-size, 100) / 100);
+    font-size: 0.875em;
+    line-height: 1.25em;
   }
   .ocb .text-base {
-    font-size: calc(1 * var(--content-text-size, 100) / 100);
-    line-height: calc(1.5rem * var(--content-text-size, 100) / 100);
+    font-size: 1em;
+    line-height: 1.5em;
   }
   .ocb .text-lg {
-    font-size: calc(1.125rem * var(--content-text-size, 100) / 100);
-    line-height: calc(1.75rem * var(--content-text-size, 100) / 100);
+    font-size: 1.125em;
+    line-height: 1.75em;
   }
   .ocb .text-xl {
-    font-size: calc(1.25rem * var(--content-text-size, 100) / 100);
-    line-height: calc(1.75rem * var(--content-text-size, 100) / 100);
+    font-size: 1.25em;
+    line-height: 1.75em;
   }
   .ocb .text-2xl {
-    font-size: calc(1.5rem * var(--content-text-size, 100) / 100);
-    line-height: calc(2rem * var(--content-text-size, 100) / 100);
+    font-size: 1.5em;
+    line-height: 2em;
   }
 
   /* Global */

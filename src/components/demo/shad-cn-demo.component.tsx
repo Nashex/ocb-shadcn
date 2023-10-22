@@ -61,7 +61,7 @@ export default function ShadCNDemo({}: Props) {
               </Alert>
 
               <Alert className="ocb">
-                <Terminal className="h-4 w-4" />
+                <Terminal className="h-[1em] w-[1em]" /> { /* Potentially add h and w styles? */}
                 <AlertTitle className="text-sm">OCB Styled Alert</AlertTitle>
                 <AlertDescription>
                   Look at the classname on the parent element.
