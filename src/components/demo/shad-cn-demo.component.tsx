@@ -60,6 +60,14 @@ export default function ShadCNDemo({}: Props) {
                 </AlertDescription>
               </Alert>
 
+              <Alert className="ocb">
+                <Terminal className="h-4 w-4" />
+                <AlertTitle className="text-sm">OCB Styled Alert</AlertTitle>
+                <AlertDescription>
+                  Look at the classname on the parent element.
+                </AlertDescription>
+              </Alert>
+
               <Card>
                 <CardHeader>
                   <CardTitle>Card Title</CardTitle>
