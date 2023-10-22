@@ -48,7 +48,7 @@ export default function ShadCNDemo({}: Props) {
 
       <Accordion type="single" collapsible defaultValue="item-1">
         <AccordionItem value="item-1" className="border-none">
-          <AccordionTrigger>Components</AccordionTrigger>
+          <AccordionTrigger>Components (Click to collapse)</AccordionTrigger>
           <AccordionContent>
             <div className="flex gap-4 flex-wrap flex-col sm:flex-row items-stretch">
               <Alert>
