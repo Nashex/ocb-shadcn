@@ -4,7 +4,8 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+  // The following makes use of relative classes, it may be a good idea to use these in an ocb tailwind plugin.
+  "relative w-full rounded-lg border p-[1em] [&>svg~*]:pl-[1.75em] [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-[1em] [&>svg]:top-[1em] [&>svg]:text-foreground",
   {
     variants: {
       variant: {
