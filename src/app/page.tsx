@@ -11,7 +11,12 @@ export default function Home() {
       <ShadCNDemo />
 
       <article className="ocb p-4 max-w-5xl w-full">
-        <h2 className="text-xl mb-2 font-medium">Article Components</h2>
+        <div className="mb-4 border-t border-border py-4">
+          <h2 className="text-xl mb-2 font-medium">Article Components</h2>
+          <p>
+            These should be full custumizable and should change sizing and spacing.
+          </p>
+        </div>
         <h3 className="text-lg mb-1 font-medium">Lorem ipsum</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
