@@ -1,8 +1,18 @@
+import ControlMenu from "@/components/control-menu/control-menu.component";
+import ShadCNDemo from "@/components/demo/shad-cn-demo.component";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
-      <article className="p-4 max-w-5xl">
-        <h1>Lorem ipsum</h1>
+      <div className="p-4 max-w-5xl w-full">
+        <ControlMenu />
+      </div>
+
+      <ShadCNDemo />
+
+      <article className="ocb p-4 max-w-5xl w-full">
+        <h2 className="text-xl mb-2 font-medium">Article Components</h2>
+        <h3 className="text-lg mb-1 font-medium">Lorem ipsum</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           sed purus vel nulla suscipit maximus vel vitae libero. Cras vestibulum
@@ -13,7 +23,8 @@ export default function Home() {
           dui et, dignissim suscipit nunc. Nam vitae sem vestibulum, tincidunt
           lorem quis, gravida risus.
         </p>
-        <h2>Orci Varius</h2>
+        <br />
+        <h3 className="text-lg mb-1 font-medium">Orci Varius</h3>
         <p>
           Vestibulum at magna ac lectus condimentum lobortis. Pellentesque in
           tellus magna. Sed dapibus dapibus imperdiet. Integer quis est eget
@@ -28,7 +39,8 @@ export default function Home() {
           consectetur, massa odio iaculis lacus, id dignissim neque sem quis
           dui.
         </p>
-        <h2>Orci Varius</h2>
+        <br />
+        <h3 className="text-lg mb-1 font-medium">Orci Varius</h3>
         <p>
           Orci varius natoque penatibus et magnis dis parturient montes,
           nascetur ridiculus mus. Curabitur dapibus, ex a fringilla mattis,
