@@ -92,6 +92,10 @@
     font-size: calc(1.25rem * var(--content-text-size, 100) / 100);
     line-height: calc(1.75rem * var(--content-text-size, 100) / 100);
   }
+  .ocb .text-2xl {
+    font-size: calc(1.5rem * var(--content-text-size, 100) / 100);
+    line-height: calc(2rem * var(--content-text-size, 100) / 100);
+  }
 
   /* Global */
   .high-contrast {

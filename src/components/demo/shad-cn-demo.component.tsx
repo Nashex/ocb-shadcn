@@ -94,6 +94,19 @@ export default function ShadCNDemo({}: Props) {
                 </CardContent>
               </Card>
 
+              <Card className="ocb">
+                <CardHeader>
+                  <CardTitle>OCB Styled Card</CardTitle>
+                  <CardDescription>Card Description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Card Content</p>
+                </CardContent>
+                <CardFooter>
+                  <p>Card Footer</p>
+                </CardFooter>
+              </Card>
+
               <Tabs defaultValue="account" className="w-[400px]">
                 <TabsList>
                   <TabsTrigger value="account">Account</TabsTrigger>
