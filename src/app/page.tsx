@@ -10,7 +10,7 @@ export default function Home() {
 
       <ShadCNDemo />
 
-      <article className="ocb p-4 max-w-5xl w-full">
+      <article className="ocb art p-4 w-full">
         <div className="mb-4 border-t border-border py-4">
           <h2 className="text-xl mb-2 font-medium">Article Components</h2>
           <p>

@@ -23,7 +23,27 @@ export default function ControlMenu({}: Props) {
   }, []);
 
   const toggleDarkMode = useCallback(() => {
-    document.documentElement.classList.toggle("dark");
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("day");
+    document.documentElement.classList.remove("night");
+  }, []);
+
+  const toggleDayMode = useCallback(() => {
+    document.documentElement.classList.add("day");
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("night");
+  }, []);
+
+  const toggleNightMode = useCallback(() => {
+    document.documentElement.classList.add("night");
+    document.documentElement.classList.remove("day");
+    document.documentElement.classList.remove("dark");
+  }, []);
+
+  const toggleLightMode = useCallback(() => {
+    document.documentElement.classList.remove("night");
+    document.documentElement.classList.remove("day");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const toggleHighContrast = useCallback(() => {
@@ -34,15 +54,21 @@ export default function ControlMenu({}: Props) {
     mutateStyles("--content-font-family", value);
   }, []);
 
+  const mutateWidth = useCallback((value: string) => {
+    mutateStyles("--max-element-width", value);
+    console.log(value);
+  }, []);
+
   return (
     <div className="p-4 border border-border rounded-lg gap-8 flex sm:flex-row flex-col items-stretch">
       <div className="flex flex-col items-start">
-        <Label className="text-sm font-medium" htmlFor="background">
-          Background
+        <Label className="text-sm font-medium" htmlFor="font-family">
+          Theme
         </Label>
-        <Button onClick={toggleDarkMode} className="mt-2" id="background">
-          <span className="text-sm">Toggle Dark Mode</span>
-        </Button>
+        <Button onClick={toggleDarkMode} style={{borderRadius: '100%', backgroundColor: "#000000", color: "#f1f1f1", border: 'solid 1px white'}}>A</Button>
+        <Button onClick={toggleNightMode} style={{borderRadius: '50%', backgroundColor: "#181b20", color: "#dfe2e7", border: 'solid 1px white'}}>A</Button>
+        <Button onClick={toggleLightMode} style={{borderRadius: '50%', backgroundColor: "#ffffff", color: "#0e0e0e", border: 'solid 1px black'}}>A</Button>
+        <Button onClick={toggleDayMode} style={{borderRadius: '50%', backgroundColor: "#e7e3df", color: "#201c18", border: 'solid 1px black'}}>A</Button>
       </div>
 
       <div className="flex flex-col items-start">
@@ -89,6 +115,25 @@ export default function ControlMenu({}: Props) {
           className="mt-2"
         />
       </div>
+      <div>
+      <Button onClick={() => mutateWidth('5px')}>Change Width</Button>
+      </div>
+{/* 
+      <div className="flex flex-col items-start">
+        <Label className="text-sm font-medium" htmlFor="font-family">
+          Width
+        </Label>
+        <Select onValueChange={mutateWidth}>
+          <SelectTrigger className="w-[180px] mt-2">
+            <SelectValue placeholder="sm" />
+          </SelectTrigger>
+          <SelectContent>
+          <SelectItem value="55ch">Small</SelectItem>
+            <SelectItem value="70ch">Medium</SelectItem>
+            <SelectItem value="90ch">Large</SelectItem>
+          </SelectContent>
+        </Select>
+      </div> */}
     </div>
   );
 }
