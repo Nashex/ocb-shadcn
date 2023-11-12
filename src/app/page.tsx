@@ -8,8 +8,6 @@ export default function Home() {
         <ControlMenu />
       </div>
 
-      <ShadCNDemo />
-
       <article className="ocb art p-4 w-full">
         <div className="mb-4 border-t border-border py-4">
           <h2 className="text-xl mb-2 font-medium">Article Components</h2>
@@ -62,6 +60,7 @@ export default function Home() {
           nunc sed ligula cursus, vitae facilisis risus pretium.
         </p>
       </article>
+      <ShadCNDemo />
     </main>
   );
 }

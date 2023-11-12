@@ -12,10 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { AlignJustify } from "lucide-react";
 
 type Props = {};
 
-export default function ControlMenu({}: Props) {
+export default function ControlMenu({ }: Props) {
   // Function to change the --background variable
   const mutateStyles = useCallback((variable: string, value: string) => {
     // TODO: Middleware to persist the variable in local storage
@@ -62,13 +63,13 @@ export default function ControlMenu({}: Props) {
   return (
     <div className="p-4 border border-border rounded-lg gap-8 flex sm:flex-row flex-col items-stretch">
       <div className="flex flex-col items-start">
-        <Label className="text-sm font-medium" htmlFor="font-family">
+        <Label className="text-sm font-medium" htmlFor="theme">
           Theme
         </Label>
-        <Button onClick={toggleDarkMode} style={{borderRadius: '100%', backgroundColor: "#000000", color: "#f1f1f1", border: 'solid 1px white'}}>A</Button>
-        <Button onClick={toggleNightMode} style={{borderRadius: '50%', backgroundColor: "#181b20", color: "#dfe2e7", border: 'solid 1px white'}}>A</Button>
-        <Button onClick={toggleLightMode} style={{borderRadius: '50%', backgroundColor: "#ffffff", color: "#0e0e0e", border: 'solid 1px black'}}>A</Button>
-        <Button onClick={toggleDayMode} style={{borderRadius: '50%', backgroundColor: "#e7e3df", color: "#201c18", border: 'solid 1px black'}}>A</Button>
+        <Button onClick={toggleDarkMode} style={{ borderRadius: '100%', backgroundColor: "#000000", color: "#f1f1f1", border: 'solid 1px white' }}>A</Button>
+        <Button onClick={toggleNightMode} style={{ borderRadius: '50%', backgroundColor: "#181b20", color: "#dfe2e7", border: 'solid 1px white' }}>A</Button>
+        <Button onClick={toggleLightMode} style={{ borderRadius: '50%', backgroundColor: "#ffffff", color: "#0e0e0e", border: 'solid 1px black' }}>A</Button>
+        <Button onClick={toggleDayMode} style={{ borderRadius: '50%', backgroundColor: "#e7e3df", color: "#201c18", border: 'solid 1px black' }}>A</Button>
       </div>
 
       <div className="flex flex-col items-start">
@@ -115,25 +116,21 @@ export default function ControlMenu({}: Props) {
           className="mt-2"
         />
       </div>
-      <div>
-      <Button onClick={() => mutateWidth('5px')}>Change Width</Button>
-      </div>
-{/* 
       <div className="flex flex-col items-start">
         <Label className="text-sm font-medium" htmlFor="font-family">
           Width
         </Label>
-        <Select onValueChange={mutateWidth}>
-          <SelectTrigger className="w-[180px] mt-2">
-            <SelectValue placeholder="sm" />
-          </SelectTrigger>
-          <SelectContent>
-          <SelectItem value="55ch">Small</SelectItem>
-            <SelectItem value="70ch">Medium</SelectItem>
-            <SelectItem value="90ch">Large</SelectItem>
-          </SelectContent>
-        </Select>
-      </div> */}
+        <Button variant="outline" size="icon" onClick={() => mutateWidth('55ch')}>
+          <AlignJustify className="h-5 w-4" />
+        </Button>
+        <Button variant="outline" size="icon" onClick={() => mutateWidth('70ch')}>
+          <AlignJustify className="h-8 w-6" />
+        </Button>
+        <Button variant="outline" size="icon" onClick={() => mutateWidth('90ch')}>
+          <AlignJustify className="h-8 w-8" />
+        </Button>
+      </div>
+      {/** 55, 70, 90 ch */}
     </div>
   );
 }
