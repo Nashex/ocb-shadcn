@@ -114,27 +114,29 @@ export default function ControlMenu({}: Props) {
         <Label className="text-sm font-medium" htmlFor="font-family">
           Width
         </Label>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => mutateWidth("36rem")}
-        >
-          <AlignJustify className="h-5 w-4" />
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => mutateWidth("48rem")}
-        >
-          <AlignJustify className="h-8 w-6" />
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => mutateWidth("64rem")}
-        >
-          <AlignJustify className="h-8 w-8" />
-        </Button>
+        <div className="flex flex-row gap-1">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => mutateWidth("36rem")}
+          >
+            <AlignJustify className="h-3 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => mutateWidth("48rem")}
+          >
+            <AlignJustify className="h-4 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => mutateWidth("64rem")}
+          >
+            <AlignJustify className="h-5 w-5" />
+          </Button>
+        </div>
       </div>
     </div>
   );
