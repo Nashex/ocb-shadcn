@@ -137,32 +137,6 @@
     max-width: var(--max-element-width);
   }
 
-  /* Style class for text sm */
-  .ocb .text-xs {
-    font-size: 0.75em;
-    line-height: 1em;
-  }
-  .ocb .text-sm {
-    font-size: 0.875em;
-    line-height: 1.25em;
-  }
-  .ocb .text-base {
-    font-size: 1em;
-    line-height: 1.5em;
-  }
-  .ocb .text-lg {
-    font-size: 1.125em;
-    line-height: 1.75em;
-  }
-  .ocb .text-xl {
-    font-size: 1.25em;
-    line-height: 1.75em;
-  }
-  .ocb .text-2xl {
-    font-size: 1.5em;
-    line-height: 2em;
-  }
-
   /* Global */
   .high-contrast {
     --border: var(--foreground);

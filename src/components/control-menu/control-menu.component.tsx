@@ -23,29 +23,16 @@ export default function ControlMenu({}: Props) {
     document.documentElement.style.setProperty(variable, value);
   }, []);
 
-  const toggleDarkMode = useCallback(() => {
-    document.documentElement.classList.add("dark");
-    document.documentElement.classList.remove("day");
-    document.documentElement.classList.remove("night");
-  }, []);
-
-  const toggleDayMode = useCallback(() => {
-    document.documentElement.classList.add("day");
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.remove("night");
-  }, []);
-
-  const toggleNightMode = useCallback(() => {
-    document.documentElement.classList.add("night");
-    document.documentElement.classList.remove("day");
-    document.documentElement.classList.remove("dark");
-  }, []);
-
-  const toggleLightMode = useCallback(() => {
-    document.documentElement.classList.remove("night");
-    document.documentElement.classList.remove("day");
-    document.documentElement.classList.remove("dark");
-  }, []);
+  const themes = ["dark", "day", "night", "light"] as const;
+  const mutateTheme = useCallback(
+    (theme: (typeof themes)[number]) => {
+      themes.forEach((t) => {
+        document.documentElement.classList.remove(`${t}`);
+      });
+      document.documentElement.classList.add(`${theme}`);
+    },
+    [themes]
+  );
 
   const toggleHighContrast = useCallback(() => {
     document.documentElement.classList.toggle("high-contrast");
@@ -66,50 +53,17 @@ export default function ControlMenu({}: Props) {
         <Label className="text-sm font-medium" htmlFor="theme">
           Theme
         </Label>
-        <Button
-          onClick={toggleDarkMode}
-          style={{
-            borderRadius: "100%",
-            backgroundColor: "#000000",
-            color: "#f1f1f1",
-            border: "solid 1px white",
-          }}
-        >
-          A
-        </Button>
-        <Button
-          onClick={toggleNightMode}
-          style={{
-            borderRadius: "50%",
-            backgroundColor: "#181b20",
-            color: "#dfe2e7",
-            border: "solid 1px white",
-          }}
-        >
-          A
-        </Button>
-        <Button
-          onClick={toggleLightMode}
-          style={{
-            borderRadius: "50%",
-            backgroundColor: "#ffffff",
-            color: "#0e0e0e",
-            border: "solid 1px black",
-          }}
-        >
-          A
-        </Button>
-        <Button
-          onClick={toggleDayMode}
-          style={{
-            borderRadius: "50%",
-            backgroundColor: "#e7e3df",
-            color: "#201c18",
-            border: "solid 1px black",
-          }}
-        >
-          A
-        </Button>
+        <Select onValueChange={mutateTheme}>
+          <SelectTrigger className="w-[180px] mt-2">
+            <SelectValue placeholder="Light" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="light">Default</SelectItem>
+            <SelectItem value="dark">Dark</SelectItem>
+            <SelectItem value="day">Day</SelectItem>
+            <SelectItem value="night">Night</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="flex flex-col items-start">
@@ -182,7 +136,6 @@ export default function ControlMenu({}: Props) {
           <AlignJustify className="h-8 w-8" />
         </Button>
       </div>
-      {/** 55, 70, 90 ch */}
     </div>
   );
 }

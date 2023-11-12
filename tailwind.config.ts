@@ -76,8 +76,8 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    plugin(function ({ addVariant }: { addVariant: Function }) {
-      addVariant("ocb", "&.ocb");
+    require("tailwindcss-em")({
+      parentClass: "ocb",
     }),
   ],
 };
