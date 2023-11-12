@@ -16,7 +16,7 @@ import { AlignJustify } from "lucide-react";
 
 type Props = {};
 
-export default function ControlMenu({ }: Props) {
+export default function ControlMenu({}: Props) {
   // Function to change the --background variable
   const mutateStyles = useCallback((variable: string, value: string) => {
     // TODO: Middleware to persist the variable in local storage
@@ -66,10 +66,50 @@ export default function ControlMenu({ }: Props) {
         <Label className="text-sm font-medium" htmlFor="theme">
           Theme
         </Label>
-        <Button onClick={toggleDarkMode} style={{ borderRadius: '100%', backgroundColor: "#000000", color: "#f1f1f1", border: 'solid 1px white' }}>A</Button>
-        <Button onClick={toggleNightMode} style={{ borderRadius: '50%', backgroundColor: "#181b20", color: "#dfe2e7", border: 'solid 1px white' }}>A</Button>
-        <Button onClick={toggleLightMode} style={{ borderRadius: '50%', backgroundColor: "#ffffff", color: "#0e0e0e", border: 'solid 1px black' }}>A</Button>
-        <Button onClick={toggleDayMode} style={{ borderRadius: '50%', backgroundColor: "#e7e3df", color: "#201c18", border: 'solid 1px black' }}>A</Button>
+        <Button
+          onClick={toggleDarkMode}
+          style={{
+            borderRadius: "100%",
+            backgroundColor: "#000000",
+            color: "#f1f1f1",
+            border: "solid 1px white",
+          }}
+        >
+          A
+        </Button>
+        <Button
+          onClick={toggleNightMode}
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "#181b20",
+            color: "#dfe2e7",
+            border: "solid 1px white",
+          }}
+        >
+          A
+        </Button>
+        <Button
+          onClick={toggleLightMode}
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "#ffffff",
+            color: "#0e0e0e",
+            border: "solid 1px black",
+          }}
+        >
+          A
+        </Button>
+        <Button
+          onClick={toggleDayMode}
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "#e7e3df",
+            color: "#201c18",
+            border: "solid 1px black",
+          }}
+        >
+          A
+        </Button>
       </div>
 
       <div className="flex flex-col items-start">
@@ -120,13 +160,25 @@ export default function ControlMenu({ }: Props) {
         <Label className="text-sm font-medium" htmlFor="font-family">
           Width
         </Label>
-        <Button variant="outline" size="icon" onClick={() => mutateWidth('55ch')}>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => mutateWidth("36rem")}
+        >
           <AlignJustify className="h-5 w-4" />
         </Button>
-        <Button variant="outline" size="icon" onClick={() => mutateWidth('70ch')}>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => mutateWidth("48rem")}
+        >
           <AlignJustify className="h-8 w-6" />
         </Button>
-        <Button variant="outline" size="icon" onClick={() => mutateWidth('90ch')}>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => mutateWidth("64rem")}
+        >
           <AlignJustify className="h-8 w-8" />
         </Button>
       </div>

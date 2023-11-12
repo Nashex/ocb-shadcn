@@ -61,9 +61,8 @@
     --destructive-foreground: 210 40% 98%;
 
     --border: 187 15% 28%;
-    --input: 187 15% 28%; 
-    --ring: 187 15% 28%; ;
-
+    --input: 187 15% 28%;
+    --ring: 187 15% 28%;
   }
 
   /*new dark mode */
@@ -119,10 +118,10 @@
 
     /* --border: 30, 14%, 11%;; */
     --border: 187 15% 61%;
-    --input: 187 15% 28%;   /*input border color*/
+    --input: 187 15% 28%; /*input border color*/
     --ring: 30, 14%, 11%;
 
-    --input: 30 14% 65%;   /*input border color*/
+    --input: 30 14% 65%; /*input border color*/
 
     --radius: 0.5rem;
   }
@@ -133,7 +132,8 @@
     font-family: var(--content-font-family);
   }
 
-  .ocb.art {
+  article.ocb,
+  .ocb article {
     max-width: var(--max-element-width);
   }
 
