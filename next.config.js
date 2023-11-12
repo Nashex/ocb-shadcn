@@ -1,4 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withMarkdoc = require("@markdoc/next.js");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = withMarkdoc({
+  appDir: true,
+  schemaPath: "./src/markdoc",
+})({
+  pageExtensions: ["md", "mdoc", "js", "jsx", "ts", "tsx"],
+});
+
+module.exports = nextConfig;
