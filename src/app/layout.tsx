@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ControlMenu from "@/components/control-menu/control-menu.component";
+import Sidebar from "@/components/sidebar/sidebar.component";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,12 @@ export default function RootLayout({
           <div className="p-4 max-w-5xl w-full">
             <ControlMenu />
           </div>
-          <article className="ocb art p-4 w-full max-w-5xl mx-auto">
-            {children}
-          </article>
+          <div className="flex">
+            <Sidebar />
+            <article className="ocb art p-4 w-full max-w-5xl mx-auto">
+              {children}
+            </article>
+          </div>
         </main>
       </body>
     </html>
