@@ -3,12 +3,20 @@ import sidebarItems from "./sidebarItems.json";
 
 export default function Sidebar() {
   return (
-    <nav className="flex flex-col gap-1 p-4 mx-auto">
-      <div className="font-semibold">Table of Contents</div>
-      {sidebarItems.map((item) => (
-        <Link key={item.name} href={item.link} className="">
-          {item.name}
-        </Link>
+    <nav className="flex flex-col gap-1 p-10 w-[320px]">
+      {sidebarItems.map((item: any) => (
+        <div className="flex flex-col gap-1">
+          <div className="text-lg">{item.title}</div>
+          {item.links.map((link: any) => (
+            <Link
+              key={link.link}
+              href={link.link}
+              className="font-extralight text-sm hover:font-normal hover:transition ease-in-out duration-200"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
       ))}
     </nav>
   );
