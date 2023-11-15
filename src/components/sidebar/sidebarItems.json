@@ -1,6 +1,6 @@
 [
   {
-    "title": "World War II",
+    "sectionTitle": "World War II",
     "links": [
       {
         "name": "Prelude to War",
@@ -8,15 +8,15 @@
       },
       {
         "name": "The War Breaks Out",
-        "link": "/lesson-1"
+        "link": "/lesson-2"
       },
       {
         "name": "Shifting Frontlines",
-        "link": "/lesson-1"
+        "link": "/lesson-3"
       },
       {
         "name": "The Final Countdown",
-        "link": "/lesson-1"
+        "link": "/lesson-4"
       }
     ]
   }
