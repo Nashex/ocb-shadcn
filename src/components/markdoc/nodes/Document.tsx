@@ -35,7 +35,7 @@ function collectHeadings(nodes: React.ReactNode[], sections: any[] = []) {
 
 export default function Document({ children, source, ...rest }: Props) {
   const sections = collectHeadings(children);
-  
+
   return (
     <div className="w-full">
       <article className="w-full">{children}</article>
