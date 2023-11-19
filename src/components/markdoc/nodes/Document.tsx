@@ -41,9 +41,11 @@ export default function Document({ children, source, ...rest }: Props) {
   return (
     <div className="w-full flex h-full">
       <div className="w-full justify-center flex px-12">
-        <article className="text-foreground prose-headings:text-foreground ocb w-full transition-all">
-          {children}
-        </article>
+        <div className="prose">
+          <article className="text-foreground  ocb w-full transition-all">
+            {children}
+          </article>
+        </div>
       </div>
       <Aside sections={sections} />
     </div>

@@ -1,4 +1,4 @@
-import QuizQuestion from "@/components/quiz/QuizQuestion";
+import QuizQuestion from "@/components/markdoc/tags/quiz/QuizQuestion";
 
 export const quiz = {
   render: QuizQuestion,

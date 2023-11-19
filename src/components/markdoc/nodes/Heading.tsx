@@ -9,10 +9,10 @@ interface Props {
 
 export function Heading({ id = "", level = 1, children, className }: Props) {
   const classes = [
-    "text-base/[0]",
-    "text-lg/[0]",
-    "text-xl/[0]",
-    "text-2xl/[0]",
+    "text-base",
+    "text-lg",
+    "text-xl",
+    "text-2xl",
   ];
   const sizeClass = classes[Math.max(classes.length - level, 0)];
 
@@ -20,7 +20,7 @@ export function Heading({ id = "", level = 1, children, className }: Props) {
     `h${level}`,
     {
       id,
-      className: ["font-bold my-2 leading-tight", sizeClass, className]
+      className: ["not-prose font-bold my-2 leading-tight", sizeClass, className]
         .filter(Boolean)
         .join(" "),
     },
