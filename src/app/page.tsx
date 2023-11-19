@@ -20,17 +20,17 @@ function ContentCard(post: Content) {
 
 export default function Home() {
   return (
-    <div className="w-full mx-auto max-w-xl py-8">
+    <div className="w-full mx-auto max-w-xl p-8">
       <div className="mb-8">
-        <h1 className="text-2xl mb-2 font-black">
-          OCB + MDX Table of Contents
-        </h1>
+        <h1 className="text-xl mb-2 font-black">OCB + MDX Table of Contents</h1>
         <p>
-          This is a demo of OCB + MDX + ContentLayer.
-          <a href="https://github.com/Nashex/ocb-shadcn/tree/mdx">
-            Here is the repo
+          This is a demo of OCB + MDX + ContentLayer.{" "}
+          <a
+            href="https://github.com/Nashex/ocb-shadcn/tree/mdx"
+            className="text-blue-500"
+          >
+            Here is the repo.
           </a>
-          .
         </p>
       </div>
       {toc.map((section, index) => (

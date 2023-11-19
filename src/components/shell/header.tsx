@@ -11,7 +11,7 @@ import Link from "next/link";
 type Props = {};
 
 export default function Header({}: Props) {
-  const [scrollingDown, setScrollingDown] = useState(true);
+  const [scrollingDown, setScrollingDown] = useState(false);
   const lastScrollTop = useRef(0);
 
   useEffect(() => {
