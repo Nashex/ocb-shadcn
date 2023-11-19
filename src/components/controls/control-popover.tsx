@@ -66,7 +66,7 @@ export default function ControlPopover({ trigger }: Props) {
       <PopoverTrigger asChild>
         {trigger || <button>Open</button>}
       </PopoverTrigger>
-      <PopoverContent collisionPadding={64}>
+      <PopoverContent collisionPadding={36}>
         <div className="flex flex-col gap-6">
           {/* Theme */}
           <div className="flex flex-row items-center justify-between">

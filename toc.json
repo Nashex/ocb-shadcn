@@ -4,15 +4,15 @@
     "links": [
       {
         "name": "Prelude to War",
-        "link": "/lesson-1"
+        "link": "/content/lesson-1"
       },
       {
         "name": "The War Breaks Out",
-        "link": "/lesson-2"
+        "link": "/content/lesson-2"
       },
       {
         "name": "Shifting Frontlines",
-        "link": "/lesson-3"
+        "link": "/content/lesson-3"
       }
     ]
   }

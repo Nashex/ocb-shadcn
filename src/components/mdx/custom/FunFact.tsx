@@ -1,9 +1,10 @@
 "use client";
 
-import { MouseEventHandler, useState } from "react";
+import { PropsWithChildren, useState } from "react";
 
-export default function FunFact({ children }: { children: any }) {
+export default function FunFact({ children }: PropsWithChildren) {
   const [selection, setSelection] = useState(-1);
+
   const onClick = (num: number) => {
     if (num === selection) {
       setSelection(-1);
@@ -11,6 +12,7 @@ export default function FunFact({ children }: { children: any }) {
       setSelection(num);
     }
   };
+
   return (
     <div className="bg-gray-100 rounded-2xl p-4 my-4">
       <div className="text-xl text-purple-700 font-semibold">💡 Fun Fact</div>

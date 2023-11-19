@@ -1,11 +1,7 @@
-const withMarkdoc = require("@markdoc/next.js");
+// next.config.js
+const { withContentlayer } = require('next-contentlayer')
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withMarkdoc({
-  appDir: true,
-  schemaPath: "./src/markdoc",
-})({
-  pageExtensions: ["md", "mdoc", "js", "jsx", "ts", "tsx"],
-});
+const nextConfig = { reactStrictMode: true, swcMinify: true }
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig)
