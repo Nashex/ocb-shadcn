@@ -3,6 +3,8 @@ title: "World War 2: Shifting Frontlines and the Final Countdown in World War II
 description: WW2 Lesson 3.
 ---
 
+# Shifting Frontlines and the Final Countdown in World War II
+
 In Lesson 3, we journey through the pivotal middle and late stages of World War II, where the tides of battle shifted dramatically. We explore key battles and events, from the brutal Eastern Front to the Pacific Theater, that marked significant turning points, ultimately leading to the Axis powers' downfall. This lesson also delves into the harrowing realities of the Holocaust and war crimes, culminating in the profound impact of the war's end and the shaping of the post-war world. This crucial phase of the war demonstrates not only the strategic and military shifts but also the human cost and the enduring global consequences of this monumental conflict.
 
 {% fun_fact %}

@@ -1,3 +1,4 @@
+import Aside from "@/components/shell/aside";
 import * as React from "react";
 
 interface Props {
@@ -22,6 +23,7 @@ function collectHeadings(nodes: React.ReactNode[], sections: any[] = []) {
         if (typeof title === "string") {
           sections.push({
             title,
+            id: `${element.props.id}`,
           });
         }
       }
@@ -37,9 +39,13 @@ export default function Document({ children, source, ...rest }: Props) {
   const sections = collectHeadings(children);
 
   return (
-    <div className="w-full">
-      <article className="w-full">{children}</article>
-      <div>{/* Define aside here */}</div>
+    <div className="w-full flex h-full">
+      <div className="w-full justify-center flex px-12">
+        <article className="text-foreground prose-headings:text-foreground ocb w-full transition-all">
+          {children}
+        </article>
+      </div>
+      <Aside sections={sections} />
     </div>
   );
 }

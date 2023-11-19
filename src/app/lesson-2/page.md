@@ -3,6 +3,8 @@ title: "World War 2: The War Breaks Out"
 description: WW2 Lesson 2.
 ---
 
+# The War Breaks Out
+
 In Lesson 2, we delve into the critical moments that marked the official outbreak of World War II, a global conflict that reshaped the course of the 20th century. We begin by examining the invasion of Poland in September 1939 by Nazi Germany, a bold move that defied international agreements and prompted Britain and France to declare war. This lesson will also explore the early phase of the war characterized by Germany's lightning-fast 'Blitzkrieg' tactics, alongside the expansion of the conflict beyond European borders, signaling the transition from regional hostilities to a truly global war.
 
 ### The Invasion of Poland and the Outbreak of War
