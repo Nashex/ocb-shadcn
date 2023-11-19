@@ -20,10 +20,19 @@ function ContentCard(post: Content) {
 
 export default function Home() {
   return (
-    <div className="w-full py-8">
-      <h1 className="mb-8 text-center text-2xl font-black">
-        OCB + MDX Table of Contents
-      </h1>
+    <div className="w-full mx-auto max-w-xl py-8">
+      <div className="mb-8">
+        <h1 className="text-2xl mb-2 font-black">
+          OCB + MDX Table of Contents
+        </h1>
+        <p>
+          This is a demo of OCB + MDX + ContentLayer.
+          <a href="https://github.com/Nashex/ocb-shadcn/tree/mdx">
+            Here is the repo
+          </a>
+          .
+        </p>
+      </div>
       {toc.map((section, index) => (
         <div className="flex flex-col text-lg gap-1" key={index}>
           <h3 className="text-xl font-semibold mb-1">{section.sectionTitle}</h3>
@@ -31,7 +40,7 @@ export default function Home() {
             return (
               <Link
                 href={link.link}
-                className="opacity-60 w-full border border-border p-2 rounded hover:opacity-100 hover:transition duration-500"
+                className="opacity-60 w-full rounded hover:opacity-100 hover:transition duration-500"
                 key={index}
               >
                 {link.name}

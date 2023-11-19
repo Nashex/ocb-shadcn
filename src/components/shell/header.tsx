@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { CaseSensitive, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { CaseSensitive, Home, PanelLeftOpen } from "lucide-react";
 import ControlPopover from "../controls/control-popover";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import SheetSidebar from "./sheet-sidebar";
+import Link from "next/link";
 
 type Props = {};
 
@@ -33,6 +34,12 @@ export default function Header({}: Props) {
         scrollingDown && "-translate-y-20 sm:-translate-y-0"
       )}
     >
+      <Button variant="outline" size="icon">
+        <Link href="/" className="flex flex-row items-center gap-2">
+          <Home size={24} strokeWidth={1.5} />
+        </Link>
+      </Button>
+
       <SheetSidebar
         trigger={
           <Button variant="outline" size="icon" className="md:hidden">

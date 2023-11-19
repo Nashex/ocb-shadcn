@@ -22,7 +22,7 @@ const ContentPage = ({ params }: { params: { slug: string } }) => {
   }));
 
   return (
-    <div className="w-full justify-center flex flex-col items-start px-12">
+    <div className="w-full justify-center flex flex-col items-center px-12">
       <InlineAside sections={outline} />
 
       <div className="prose">
