@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ControlMenu from "@/components/control-menu/control-menu.component";
+import Sidebar from "@/components/shell/sidebar";
+import React from "react";
+import Header from "@/components/shell/header";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,15 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {" "}
-        <main className="flex flex-col items-center justify-between">
-          <div className="p-4 max-w-5xl w-full">
-            <ControlMenu />
-          </div>
-          <article className="ocb art p-4 w-full max-w-5xl mx-auto">
-            {children}
-          </article>
+      <body className={cn(inter.className, "scroll-smooth")}>
+        <Header />
+
+        <main className="relative flex justify-between">
+          <Sidebar />
+          {children}
         </main>
       </body>
     </html>

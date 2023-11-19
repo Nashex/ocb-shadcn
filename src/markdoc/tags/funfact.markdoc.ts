@@ -1,4 +1,4 @@
-import FunFact from "@/components/quiz/FunFact";
+import FunFact from "@/components/markdoc/tags/quiz/FunFact";
 
 export const funfact = {
   render: FunFact,

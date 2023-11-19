@@ -1,0 +1,19 @@
+[
+  {
+    "sectionTitle": "World War II",
+    "links": [
+      {
+        "name": "Prelude to War",
+        "link": "/lesson-1"
+      },
+      {
+        "name": "The War Breaks Out",
+        "link": "/lesson-2"
+      },
+      {
+        "name": "Shifting Frontlines",
+        "link": "/lesson-3"
+      }
+    ]
+  }
+]

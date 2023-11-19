@@ -1,17 +1,6 @@
 import { Tag } from "@markdoc/markdoc";
-import { Heading } from "@/components/article/Heading";
-
-function generateID(children: any, attributes: any) {
-  if (attributes.id && typeof attributes.id === "string") {
-    return attributes.id;
-  }
-  return children
-    .filter((child: any) => typeof child === "string")
-    .join(" ")
-    .replace(/[?]/g, "")
-    .replace(/\s+/g, "-")
-    .toLowerCase();
-}
+import { Heading } from "@/components/markdoc/nodes/Heading";
+import { generateID } from "@/lib/utils";
 
 export const heading = {
   render: Heading,

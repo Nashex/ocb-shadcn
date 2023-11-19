@@ -8,14 +8,19 @@ interface Props {
 }
 
 export function Heading({ id = "", level = 1, children, className }: Props) {
-  const classes = ["text-base", "text-lg", "text-xl", "text-2xl"];
+  const classes = [
+    "text-base",
+    "text-lg",
+    "text-xl",
+    "text-2xl",
+  ];
   const sizeClass = classes[Math.max(classes.length - level, 0)];
 
   return React.createElement(
     `h${level}`,
     {
       id,
-      className: ["font-bold", sizeClass, className]
+      className: ["not-prose font-bold my-2 leading-tight", sizeClass, className]
         .filter(Boolean)
         .join(" "),
     },

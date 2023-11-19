@@ -79,5 +79,6 @@ module.exports = {
     require("tailwindcss-em")({
       parentClass: "ocb",
     }),
+    require("@tailwindcss/typography"),
   ],
 };
